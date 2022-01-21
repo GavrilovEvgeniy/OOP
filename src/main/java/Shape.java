@@ -13,6 +13,12 @@ abstract class Triangle implements IShape {
     }
 }
 
+abstract class Square implements IShape {
+    public void draw() {
+        System.out.println("Square.draw()");
+    }
+}
+
 public class Shape {
 
     public static void main(String[] args) {
@@ -28,8 +34,15 @@ public class Shape {
                 System.out.println("Triangle.erase()");
             }
         };
+        IShape shape3 = new Square() {
+            @Override
+            public void erase() {
+                System.out.println("Square.erase()");
+            }
+        };
         testPoly(shape1);
         testPoly(shape2);
+        testPoly(shape3);
     }
 
     public static void testPoly(IShape shape) {

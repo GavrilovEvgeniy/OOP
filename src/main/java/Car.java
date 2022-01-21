@@ -49,11 +49,11 @@ class LightWeightCar extends Car implements Moveable {
 
     @Override
     void open() {
-        System.out.println("Car is open");
+        System.out.println("Light Car is open");
     }
 
     public void move() {
-        System.out.println("Car is moving");
+        System.out.println("Light Car is moving");
     }
 }
 
